@@ -23,7 +23,7 @@ setuptools.setup(
         "License :: OSI Approved :: GNU Lesser General Public License v2 or later (LGPLv2+)",
     ],
     keywords="inotify asyncio",
-    packages=setuptools.find_packages(),
+    py_modules=['inotipy'],
     zip_safe=False,
     install_requires=[],
     tests_require=[],
