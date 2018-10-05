@@ -18,16 +18,16 @@ The following script monitors that for changes:
 
     import sys
     import asyncio
-    import inotify
+    import inotipy
 
     loop = asyncio.get_event_loop()
 
     paths_to_watch = ["test"] # edit as necessary
 
     async def mainline() :
-        watcher = inotify.Watcher.create()
+        watcher = inotipy.Watcher.create()
         for path in paths_to_watch :
-            watcher.watch(path, inotify.IN.ALL_EVENTS)
+            watcher.watch(path, inotipy.IN.ALL_EVENTS)
         #end for
         while True :
             event = await watcher.get()
